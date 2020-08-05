@@ -1,4 +1,4 @@
-package main
+package goroutines
 
 import (
 	"fmt"

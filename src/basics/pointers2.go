@@ -1,4 +1,4 @@
-package main
+package basics
 
 import "fmt"
 
@@ -16,4 +16,7 @@ func main() {
 	var k *int
 	max(&i, &j, &k) // assigns &j to k
 	fmt.Println(*k)
+
+	a := &i
+	fmt.Println(a)
 }

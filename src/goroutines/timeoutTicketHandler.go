@@ -1,4 +1,4 @@
-package main
+package gorooutines
 
 import (
 	"encoding/json"

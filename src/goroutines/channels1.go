@@ -1,5 +1,4 @@
-// :collection Essential Go
-package main
+package goroutines
 
 import (
 	"fmt"

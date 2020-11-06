@@ -1,4 +1,4 @@
-package goroutines
+package main
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 // :show start
-var wg sync.WaitGroup
+var wg sync.WaitGroup // Same as using Done channel in channels.go
 
 func sqrtWorker(chIn chan int, chOut chan int) {
 	fmt.Printf("sqrtWorker started\n")

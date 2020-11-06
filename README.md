@@ -10,3 +10,4 @@ Basics of the GO lang | For future referencing
     * [GoLang.org - http package](https://golang.org/pkg/net/http/#ListenAndServe)
 2. Applications (annotations for some of the code of this project)
     * [Chat app with redis & Go](https://dev.to/azure/let-s-learn-how-to-to-build-a-chat-application-with-redis-websocket-and-go-5cck)
+    * [Real World Web App with GO & JWT](https://dev.to/stevensunflash/real-world-app-with-golang-gin-and-react-hooks-44ph)

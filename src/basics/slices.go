@@ -1,16 +1,8 @@
-package basics
+package main
 
 import "fmt"
 
 func main() {
-
-	// array
-	var a [10]int
-	a[2] = 2
-	b := a
-	b[2] = 123
-
-	// slice
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
 

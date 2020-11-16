@@ -8,7 +8,10 @@ import (
 func main() {
 
 	queue := make(chan string, 2)
+	// un-bufferred channel.
+	// someone should already be listening before writing on it
 	done := make(chan bool)
+
 	go func() {
 		// It will wait until the channel is closed
 		for elem := range queue {

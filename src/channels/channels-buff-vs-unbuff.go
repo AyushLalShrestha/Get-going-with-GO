@@ -15,7 +15,7 @@ func main2() {
 	fmt.Printf("n: %d\n", n)
 }
 
-// Send can be done before any waits but from another thread
+// "Send" can be done before any waits from another thread
 func genInts(chInts chan int) {
 	fmt.Println("Writing to the channel")
 	chInts <- rand.Intn(1000)
@@ -35,3 +35,18 @@ func main() {
 	n = <-chInts
 	fmt.Printf("n: %d\n", n)
 }
+
+/*
+In Buffered channels (make(chan int, 2)), value can be sent without blocking,
+until it is full!
+In unbuffered channels (make(chan int)), deadlock can be triggerred while
+sending a value to the channel if there is no chance that someone will
+read from the channel
+
+
+An unbuffered channel means that read and writes from and to the channel are blocking.
+In a select statement:
+1. the read would work if some other goroutine was currently blocked in writing to the channel
+2. the write would work if some other goroutine was currently blocked in reading to the channel
+3. otherwise the default case is executed, which happens in your case A.
+*/
